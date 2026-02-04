@@ -85,6 +85,11 @@ console.log(encoded); // Output: bmV3UGFzc3dvcmQ=
 
 ## Running Tests
 
+### Quick Demo of Available Modes:
+```bash
+./demo-ui-mode.sh
+```
+
 ### Verify project setup:
 ```bash
 # Check TypeScript compilation
@@ -102,7 +107,11 @@ npm test
 ### Run tests in headed mode (see browser):
 ```bash
 npm run test:headed
+# OR
+npm run test:ui
 ```
+
+**📖 For detailed UI mode information**, see [UI_MODE_GUIDE.md](UI_MODE_GUIDE.md)
 
 ### Run tests with debugging:
 ```bash
@@ -150,6 +159,8 @@ After running tests, reports are generated in:
 ### Enable headed mode:
 ```bash
 npm run test:headed
+# OR for UI mode with visible browser
+npm run test:ui
 ```
 
 ### Enable Playwright Inspector:

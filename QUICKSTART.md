@@ -53,6 +53,9 @@ npm test
 # Run tests with visible browser
 npm run test:headed
 
+# OR use the UI mode alias
+npm run test:ui
+
 # Run tests with debugging enabled
 npm run test:debug
 
@@ -118,6 +121,7 @@ const encoded = CredentialsHelper.encode('newValue');
 | `npm install` | Install all dependencies |
 | `npm test` | Run all tests |
 | `npm run test:headed` | Run with visible browser |
+| `npm run test:ui` | Run with visible browser (UI mode) |
 | `npm run test:debug` | Run with Playwright Inspector |
 | `npm run verify:credentials` | Verify credential encoding |
 | `npm run verify:typescript` | Check TypeScript compilation |
