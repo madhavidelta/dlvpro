@@ -102,6 +102,8 @@ npm test
 ### Run tests in headed mode (see browser):
 ```bash
 npm run test:headed
+# OR
+npm run test:ui
 ```
 
 ### Run tests with debugging:
@@ -150,6 +152,8 @@ After running tests, reports are generated in:
 ### Enable headed mode:
 ```bash
 npm run test:headed
+# OR for UI mode with visible browser
+npm run test:ui
 ```
 
 ### Enable Playwright Inspector:
