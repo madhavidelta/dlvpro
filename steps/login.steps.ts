@@ -15,7 +15,7 @@ let page: Page;
 Before(async function () {
   // Launch browser
   browser = await chromium.launch({
-    headless: true,
+    headless: false,
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
   
