@@ -39,11 +39,11 @@ The UI mode is controlled by the `HEADED` environment variable:
 
 ```typescript
 // In steps/login.steps.ts
-const headless = process.env.HEADED !== 'true';
+const isHeadless = process.env.HEADED !== 'true';
 
 browser = await chromium.launch({
-  headless: headless,
-  slowMo: headless ? 0 : 100  // Slow down actions in UI mode
+  headless: isHeadless,
+  slowMo: isHeadless ? 0 : 100  // Slow down actions in UI mode
 });
 ```
 
@@ -108,8 +108,8 @@ To modify the slow motion speed, edit `steps/login.steps.ts`:
 
 ```typescript
 browser = await chromium.launch({
-  headless: headless,
-  slowMo: headless ? 0 : 500  // Change 100 to 500 for slower actions
+  headless: isHeadless,
+  slowMo: isHeadless ? 0 : 500  // Change 100 to 500 for slower actions
 });
 ```
 
@@ -120,11 +120,11 @@ Currently configured for Chromium. To use other browsers, modify the import in `
 ```typescript
 // For Firefox
 import { firefox } from '@playwright/test';
-browser = await firefox.launch({ headless: headless });
+browser = await firefox.launch({ headless: isHeadless });
 
 // For WebKit (Safari)
 import { webkit } from '@playwright/test';
-browser = await webkit.launch({ headless: headless });
+browser = await webkit.launch({ headless: isHeadless });
 ```
 
 ## Screenshots
@@ -166,7 +166,7 @@ npm run test:headed
 
 **Solution**: Increase the slowMo value:
 ```typescript
-slowMo: headless ? 0 : 500  // Increase from 100 to 500
+slowMo: isHeadless ? 0 : 500  // Increase from 100 to 500
 ```
 
 ### Issue: Browser opens but closes immediately
