@@ -85,6 +85,11 @@ console.log(encoded); // Output: bmV3UGFzc3dvcmQ=
 
 ## Running Tests
 
+### Quick Demo of Available Modes:
+```bash
+./demo-ui-mode.sh
+```
+
 ### Verify project setup:
 ```bash
 # Check TypeScript compilation
