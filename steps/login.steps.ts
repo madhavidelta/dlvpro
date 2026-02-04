@@ -15,12 +15,12 @@ let page: Page;
 Before(async function () {
   // Launch browser
   // Check if HEADED environment variable is set to run with UI
-  const headless = process.env.HEADED !== 'true';
+  const isHeadless = process.env.HEADED !== 'true';
   
   browser = await chromium.launch({
-    headless: headless,
+    headless: isHeadless,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    slowMo: headless ? 0 : 100 // Slow down actions in headed mode for better visibility
+    slowMo: isHeadless ? 0 : 100 // Slow down actions in headed mode for better visibility
   });
   
   // Create a new browser context

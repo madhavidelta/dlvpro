@@ -142,6 +142,15 @@ Even in headless mode, screenshots are captured:
 
 ## Troubleshooting
 
+### Issue: "Looks like you launched a headed browser without having a XServer running"
+
+**Cause**: You're trying to run UI mode in a headless environment (like a CI server or Docker container without display)
+
+**Solution**: Either:
+1. Run in a local development environment with a display
+2. Use headless mode: `npm test`
+3. In Linux without display, use xvfb: `xvfb-run npm run test:ui`
+
 ### Issue: Browser doesn't open in UI mode
 
 **Cause**: HEADED environment variable might not be set correctly

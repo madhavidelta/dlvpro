@@ -6,7 +6,7 @@
   "scripts": {
     "test": "cucumber-js",
     "test:ui": "HEADED=true cucumber-js --parallel 1",
-    "test:headed": "HEADED=true cucumber-js --parallel 1",
+    "test:headed": "npm run test:ui",
     "test:debug": "PWDEBUG=1 cucumber-js --parallel 1",
     "test:report": "cucumber-js --format html:reports/cucumber-report.html",
     "verify:credentials": "ts-node tests/test-credentials.ts",
