@@ -85,6 +85,15 @@ console.log(encoded); // Output: bmV3UGFzc3dvcmQ=
 
 ## Running Tests
 
+### Verify project setup:
+```bash
+# Check TypeScript compilation
+npm run verify:typescript
+
+# Verify credentials encoding/decoding
+npm run verify:credentials
+```
+
 ### Run all tests:
 ```bash
 npm test

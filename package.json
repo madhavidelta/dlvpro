@@ -7,7 +7,9 @@
     "test": "cucumber-js",
     "test:headed": "cucumber-js --parallel 1",
     "test:debug": "PWDEBUG=1 cucumber-js --parallel 1",
-    "test:report": "cucumber-js --format html:reports/cucumber-report.html"
+    "test:report": "cucumber-js --format html:reports/cucumber-report.html",
+    "verify:credentials": "ts-node tests/test-credentials.ts",
+    "verify:typescript": "tsc --noEmit"
   },
   "keywords": [
     "playwright",

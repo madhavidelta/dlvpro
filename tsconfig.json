@@ -26,7 +26,6 @@
     "dist"
   ],
   "ts-node": {
-    "transpileOnly": true,
-    "require": ["tsconfig-paths/register"]
+    "transpileOnly": true
   }
 }
