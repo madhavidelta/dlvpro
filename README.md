@@ -106,6 +106,8 @@ npm run test:headed
 npm run test:ui
 ```
 
+**📖 For detailed UI mode information**, see [UI_MODE_GUIDE.md](UI_MODE_GUIDE.md)
+
 ### Run tests with debugging:
 ```bash
 npm run test:debug
